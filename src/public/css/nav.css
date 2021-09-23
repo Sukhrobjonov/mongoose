@@ -1,0 +1,143 @@
+:root {
+    --mainColor: #002f34;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f4f5;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    background-color: var(--mainColor);
+    height: 9%;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-brand {
+    width: 71px;
+    height: 41px;
+    display: block;
+    left: 15px;
+    top: 15px;
+    z-index: 10;
+    text-indent: -1000em;
+}
+
+.nav-brand__o {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(12px, 15px);
+    content: "";
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 12px #24e5db;
+}
+
+.nav-brand__l {
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    background: #23e5db;
+    position: absolute;
+    left: 37px;
+}
+
+.nav-brand__x {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(51px, 10px);
+}
+
+.nav-brand__x::before {
+    transform: skewX(45deg) translate(-50%, 0);
+}
+
+.nav-brand__x::after {
+    transform: skewX(-45deg) translate(-50%, 0);
+}
+
+.nav-brand__x::before,
+.nav-brand__x::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    height: 100%;
+    background: #24e5db;
+}
+
+.nav-search {
+    width: 30%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.nav-search:hover,
+.nav-search:focus {
+    border: 2px solid #24e5db;
+}
+
+.nav-link {
+    padding: 9px 15px;
+    font-weight: bold;
+    color: #fff;
+    background-color: inherit;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link:last-child {
+    color: var(--mainColor);
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: background-color 0.4s;
+}
+
+.nav-link:last-child:hover {
+    background-color: var(--mainColor);
+    color: #fff;
+}

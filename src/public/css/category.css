@@ -1,0 +1,235 @@
+:root {
+    --mainColor: #002f34;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif !important;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f4f5;
+}
+
+.main-section {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.main-section > .container {
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.main-section > .container .title {
+    font-size: 30px;
+    color: var(--mainColor);
+}
+
+.categories {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+
+.category-wrapper {
+    max-width: 110px;
+    flex: 0 0 110px;
+    margin: 0 4px 20px 4px;
+}
+
+.fleft {
+    float: left;
+}
+
+.category-link {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--mainColor);
+}
+
+.category-name {
+    font-weight: bold;
+}
+
+.cat-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 19px;
+}
+
+.cat-icon-circle {
+    font-size: 28px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: normal !important;
+}
+
+.cat-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f2f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 29px;
+}
+
+.item .category-link > span {
+    max-width: 100%;
+}
+
+.cat-icon.cat-cmt-icon-36 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/detskiy-mir-36-2x.png);
+}
+
+.cat-icon-36 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f7e12d….png);
+    background-color: #ffce32 !important;
+}
+
+.cat-icon.cat-cmt-icon-1 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/nedvizhimost-1-2x.png);
+}
+
+.cat-icon-1 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2fbcfad….png);
+    background-color: #3a77ff !important;
+}
+
+.cat-icon.cat-cmt-icon-3 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/transport-3-2x.png);
+}
+
+.cat-icon-3 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2fd423b….png);
+    background-color: #23e5db !important;
+}
+
+.cat-icon.cat-cmt-icon-6 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/rabota-6-2x.png);
+}
+
+.cat-icon-6 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2ffdfc1….png);
+    background-color: #ff5636 !important;
+}
+
+.cat-icon.cat-cmt-icon-35 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/zhivotnye-35-2x.png);
+}
+
+.cat-icon-35 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f3f64b….png);
+    background-color: #fff6d9 !important;
+}
+
+.cat-icon.cat-cmt-icon-899 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/dom-i-sad-899-2x.png);
+}
+
+.cat-icon-899 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f828da….png);
+    background-color: #ceddff !important;
+}
+
+.cat-icon.cat-cmt-icon-37 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/elektronika-37-2x.png);
+}
+
+.cat-icon-37 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2fbdd6c….png);
+    background-color: #c8f8f6 !important;
+}
+
+.cat-icon.cat-cmt-icon-7 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/uslugi-7-2x.png);
+}
+
+.cat-icon-7 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f44a67….png);
+    background-color: #ffd6c9 !important;
+}
+
+.cat-icon.cat-cmt-icon-891 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/moda-i-stil-891-2x.png);
+}
+
+.cat-icon-891 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2fe929a….png);
+    background-color: #ffce32 !important;
+}
+
+.cat-icon.cat-cmt-icon-903 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/hobbi-otdyh-i-sport-903-2x.png);
+}
+
+.cat-icon-903 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f6aba4….png);
+    background-color: #ceddff !important;
+}
+
+.cat-icon.cat-cmt-icon-1151 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/otdam-darom-1151-2x.png);
+}
+
+.cat-icon-1151 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2f03d96….png);
+    background-color: #c8f8f6 !important;
+}
+
+.cat-icon.cat-cmt-icon-1153 {
+    background-image: url(https://categories.olxcdn.com/assets/categories/olxuz/obmen-barter-1153-2x.png);
+}
+
+.cat-icon-1153 {
+    background-image: url(https://static.olx.uz/static/olxuz/packed/img/2fdea07….png);
+    background-color: #ffd6c9 !important;
+}
+
+.category-0.cat-icon-promo {
+    background-image: url(https://categories.olxcdn.com/assets/promo/olxuz/ticket-1x.png);
+}

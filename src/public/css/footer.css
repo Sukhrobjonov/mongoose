@@ -1,0 +1,69 @@
+:root {
+    --mainColor: #002f34;
+}
+
+.footer {
+    width: 100%;
+    height: 35%;
+    border-top: 1px solid #002f34;
+    display: flex;
+    align-items: center;
+}
+
+.footer > .container {
+    width: 80%;
+    background-color: #f2f4f5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list {
+    width: 25%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.list-item {
+    margin-bottom: 20px;
+}
+
+.item-link {
+    color: #002f34;
+    font-weight: 600;
+}
+
+.download {
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download .icon {
+    width: 150px;
+    height: 48px;
+    margin: 0 3px;
+    background: no-repeat 50% 50%;
+    background-size: 100%;
+    margin-left: 20px;
+    border: 1px solid #002f34;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, margin-right 0.3s;
+}
+
+.download .icon.googleplay {
+    background-repeat: no-repeat;
+    background-image: url("	https://static.olx.uz/static/olxuz/packed/font/2fc9f37e6707acfc0e1255cec57c49a986.svg");
+}
+
+.download .icon.appstore {
+    background-repeat: no-repeat;
+    background-image: url("https://static.olx.uz/static/olxuz/packed/font/2fccd2faa9395d5faed1011516c64dc929.svg");
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}

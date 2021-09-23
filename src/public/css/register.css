@@ -1,0 +1,95 @@
+:root {
+    --mainColor: #002f34;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif !important;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f4f5;
+}
+
+.register {
+    width: 100%;
+    height: 91%;
+    background-color: #3a77ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 25%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.title {
+    color: var(--mainColor);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.input,
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--mainColor);
+}

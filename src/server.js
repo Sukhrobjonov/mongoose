@@ -8,7 +8,7 @@ const routes = require("./routes/routes");
 
 async function server(mode) {
     const app = express();
-    app.listen(PORT, _ => {
+    app.listen(PORT, () => {
         console.log(`Server has been started on ${PORT} port`);
     });
     try {
@@ -21,7 +21,7 @@ async function server(mode) {
         );
         app.use(express.json());
         app.use(cookieParser());
-        app.use(express.static(path.join(__dirname, "src", "public")));
+        app.use(express.static(path.join(__dirname, "public")));
         if (mode == "DEV") {
             app.use(morgan("dev"));
         }
@@ -30,6 +30,7 @@ async function server(mode) {
         // Settings
 
         app.set("view engine", "ejs");
+        app.set("views", path.join(__dirname, "views"));
     } finally {
         routes(app);
     }
