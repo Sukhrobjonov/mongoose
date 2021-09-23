@@ -3,7 +3,8 @@ const express = require("express");
 const morgan = require("morgan");
 const PORT = process.env.PORT || 8080;
 const path = require("path");
-const databaseMiddleware = require("./middlewares/databaseMiddleware");
+const mongo = require("./modules/mongoose");
+
 const routes = require("./routes/routes");
 
 async function server(mode) {
@@ -25,7 +26,8 @@ async function server(mode) {
         if (mode == "DEV") {
             app.use(morgan("dev"));
         }
-        app.use(databaseMiddleware);
+
+        await mongo;
 
         // Settings
 
