@@ -1,3 +1,4 @@
+<% var user %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,10 +25,19 @@
                         placeholder="Посик"
                     />
                     <div class="links">
+                        <% if(!user) {%>
                         <a href="/users/login" class="nav-link">Войти</a>
                         <a href="/users/register" class="nav-link"
                             >Регистрация</a
                         >
+                        <% }else {%>
+                        <a href="/users/login" class="nav-link"
+                            >Подать объявление</a
+                        >
+                        <a href="/users/profile" class="nav-link"
+                            ><%= user.name%></a
+                        >
+                        <% } %>
                     </div>
                 </nav>
             </div>

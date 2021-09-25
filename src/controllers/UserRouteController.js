@@ -1,7 +1,10 @@
 const users = require("../models/UserModel");
-const { genCrypt } = require("../modules/bcrypt");
-const mail = require("../modules/email");
-const { registrationValidation } = require("../modules/validation");
+const { genCrypt, compareHash } = require("../modules/bcrypt");
+const { createToken } = require("../modules/jwt");
+const {
+    registrationValidation,
+    loginValidation,
+} = require("../modules/validation");
 
 module.exports = class UserRouteController {
     static async UserRegistrationGetController(req, res) {
@@ -32,6 +35,31 @@ module.exports = class UserRouteController {
     }
 
     static async UserLoginPostController(req, res) {
-        console.log(req.body);
+        try {
+            const { email, password } = await loginValidation(req.body);
+
+            const user = await users.findOne({
+                email: email,
+            });
+
+            if (!user) throw new Error("Пользователь не найден");
+
+            const isTrust = await compareHash(password, user.password);
+
+            if (!isTrust) throw new Error("Неверный пароль");
+
+            res.cookie(
+                "token",
+                await createToken({
+                    id: user._id,
+                })
+            ).redirect("/");
+
+            console.log(user);
+        } catch (error) {
+            res.render("login", {
+                error,
+            });
+        }
     }
 };
