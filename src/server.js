@@ -27,7 +27,7 @@ async function server(mode) {
             app.use(morgan("dev"));
         }
 
-        await mongo;
+        await mongo();
 
         // Settings
 

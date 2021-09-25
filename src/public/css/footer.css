@@ -11,20 +11,24 @@
 }
 
 .footer > .container {
-    width: 80%;
+    width: 75%;
     background-color: #f2f4f5;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-list {
     width: 25%;
-    height: 100%;
     background-color: inherit;
 }
 
 .list-item {
     margin-bottom: 20px;
+}
+
+.list-item:last-child {
+    margin: 0;
 }
 
 .item-link {

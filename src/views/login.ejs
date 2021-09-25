@@ -1,3 +1,4 @@
+<%var error %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,10 +13,14 @@
         <section class="login">
             <form class="form" method="POST">
                 <h1 class="title">Войти</h1>
+                <% if(error){ %>
+                <div class="error active"><%= error %></div>
+                <%} %>
                 <input
                     class="input"
                     type="email"
                     name="email"
+                    autocomplete="off"
                     placeholder="Электронная почта"
                     required
                 />
