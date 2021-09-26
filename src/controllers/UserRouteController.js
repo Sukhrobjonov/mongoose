@@ -54,12 +54,20 @@ module.exports = class UserRouteController {
                     id: user._id,
                 })
             ).redirect("/");
-
-            console.log(user);
         } catch (error) {
             res.render("login", {
                 error,
             });
         }
+    }
+
+    static async UserExitGetController(req, res) {
+        res.clearCookie("token").redirect("/");
+    }
+
+    static async UserPtofileGetController(req, res) {
+        res.render("profile", {
+            user: req.user,
+        });
     }
 };
